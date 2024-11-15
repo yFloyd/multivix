@@ -1,0 +1,102 @@
+body {
+  background: linear-gradient(to bottom, #fbe1e8, #f9c7d1); /* Gradiente rosa ainda mais claro */
+  background-attachment: fixed; /* Fundo fixo */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Fonte opcional */
+  height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+  background-size: cover; /* Faz o fundo cobrir toda a tela */
+}
+
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Alinha itens no topo */
+}
+
+form label,
+form input[type="text"],
+form input[type="number"],
+form input[type="datetime-local"],
+form select,
+#otherProcedure,
+button {
+  flex: 0 0 40%; /* Reduz a largura dos campos */
+  margin: 8px 4px; /* Reduz as margens */
+  padding: 8px; /* Reduz o padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+#otherProcedure {
+  display: none; /* Oculto por padrão */
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+.fc-daygrid-day-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fc-daygrid-day-number {
+  flex: none;
+}
+
+.daily-total {
+  font-size: 0.8em;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin-top: 5px;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.value-input[readonly] {
+  background-color: #f0f0f0; /* Cor de fundo acinzentada */
+  cursor: not-allowed; /* Cursor para indicar que não pode ser editado */
+}
+
+.value-input {
+  background-color: #fff; /* Cor de fundo branca para editável */
+  cursor: text; /* Cursor de texto para quando editável */
+}
+
+.delete-btn {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 6px; /* Reduzido pela metade */
+  height: 6px; /* Reduzido pela metade */
+  cursor: pointer;
+  font-size: 5px; /* Ajuste proporcional do texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Remove qualquer espaço interno */
+  margin-right: 3px; /* Pequeno espaço entre o botão e o texto */
+}
+
+.delete-btn:hover {
+  background-color: #e04a4a;
+}

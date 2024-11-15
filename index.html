@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda de Procedimentos</title>
+<link href='https://unpkg.com/fullcalendar@5/main.min.css' rel='stylesheet' />
+<link rel="stylesheet" href="styles.css">
+<script src='https://unpkg.com/fullcalendar@5/main.min.js'></script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Agendar Procedimento</h2>
+    <form id="appointmentForm">
+      <label for="appointmentDate">Data e Hora:</label>
+      <input type="datetime-local" id="appointmentDate" required>
+  
+      <label for="clientName">Nome do Cliente:</label>
+      <input type="text" id="clientName" placeholder="Nome do Cliente" required>
+  
+      <label for="procedure">Procedimento:</label>
+      <select id="procedure" required>
+        <option value="" disabled selected>Selecione um procedimento</option>
+        <option value="Limpeza de pele">Limpeza de pele</option>
+        <option value="Micropigmentação">Micropigmentação</option>
+        <option value="Depilação Egipicia">Depilação Egipicia</option>
+        <option value="Hidratação Profunda">Hidratação Profunda</option>
+        <option value="Depilação com Cera">Depilação com Cera</option>
+        <option value="outros">Outros</option>
+      </select>
+
+      <label for="value">Valor:</label>
+      <input type="number" id="value" class="value-input" placeholder="Valor" readonly required>
+
+      <!-- Campo de texto para "Outros" -->
+      <input type="text" id="otherProcedure" placeholder="Especifique o procedimento" style="display:none;">
+  
+      <button type="submit">Agendar</button>
+    </form>
+
+  <!-- <h3>Calendário de Agendamentos</h3> -->
+   <br>
+   <br>
+  <div id="calendar"></div>
+
+  <!-- Modal (invisível inicialmente) -->
+<!-- Modal (invisível inicialmente) -->
+<div id="eventModal" style="display:none; position: fixed; top: 20%; left: 50%; transform: translateX(-50%); background: white; padding: 20px; border: 1px solid #ccc; z-index: 1000;">
+  <h2 id="modalTitle"></h2>
+  <p id="modalContent"></p>
+  <button id="closeModalBtn" style="margin-top: 10px;">Fechar</button>
+</div>
+
+<div id="totals">
+  <div id="totalToday">Total do Dia Atual: R$ 0,00</div>
+  <div id="totalMonth">Total do Mês Acumulado: R$ 0,00</div>
+</div>
+
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
